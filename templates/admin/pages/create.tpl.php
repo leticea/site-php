@@ -22,6 +22,7 @@
     </div>
     <br>
     <div class="form-group">
+        <input id="pagesBody" type="hidden" name="body">
         <trix-editor input="pagesBody"></trix-editor>
     </div>
 
