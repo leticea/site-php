@@ -8,5 +8,13 @@ function flash($message = null, $type = null)
 
     } else {
         // [mostra a mensagem]
+        $flash = $_SESSION['flash'] ?? [];
+        if (!count($flash)) {
+            return;
+        }
+
+        foreach ($flash as $key => $message) {
+            
+        }
     }
 }
