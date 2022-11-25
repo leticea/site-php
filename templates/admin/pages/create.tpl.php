@@ -1,4 +1,4 @@
-<h3>Administração de Páginas</h3>
+<h3 class="mb-5">Administração de Páginas</h3>
 
 <form action="" method="POST">
     <div class="form-group">
@@ -8,11 +8,11 @@
             type="text" 
             class="form-control" 
             placeholder="Título da página..."
+            required
         />
     </div>
-    <br>
     <div class="form-group">
-        <label for="pagesUrl"><h5>URL</h5></label>
+        <label for="pagesUrl"><h5 class="mt-3">URL</h5></label>
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">/</span>
