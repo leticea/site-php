@@ -1,4 +1,4 @@
-<h3 class="mb-5">Administração de Páginas</h3>
+<h3 class="mb-5">Edição de página</h3>
 
 <form action="" method="POST">
     <div class="form-group">
