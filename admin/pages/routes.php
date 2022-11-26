@@ -11,7 +11,7 @@ include __DIR__ . '/database.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pages_create();
-        header('location: /admin/pages');
+        return header('location: /admin/pages');
     }
     render('admin/pages/create', 'admin'); 
 
@@ -24,15 +24,12 @@ include __DIR__ . '/database.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pages_edit($params[1]);
-        header('location: /admin/pages/' . $params[1]);
+        return header('location: /admin/pages/' . $params[1]);
     }
     render('admin/pages/edit', 'admin'); 
 
 } elseif ($params = resolve('/admin/pages/(\d+)/delete')) {
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $pages_delete($params[1]);
-        header('location: /admin/pages');
-    }
-    header('location: /admin/pages');
+    $pages_delete($params[1]);
+    return header('location: /admin/pages');
 }
