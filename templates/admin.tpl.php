@@ -44,7 +44,6 @@
     <script src="/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="/resources/trix/trix.js"></script>
     <script src="/resources/pnotify/pnotify.custom.min.js"></script>
-
     <script>
         <?php flash(); ?>
     </script>
