@@ -51,12 +51,17 @@
         <?php flash(); ?>
         
         const confirmEl = document.querySelector('.confirm');
-        confirmEl.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (confirm('Tem certeza que deseja fazer isso?')) {
-                alert('Sim');
-            }
-        });
+
+        if (confirmEl) {
+
+            confirmEl.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (confirm('Tem certeza que deseja fazer isso?')) {
+                    window.location = e.target.getAttribute('href');
+                }
+            });
+        }
+
     </script>
 </body>
 </html>
