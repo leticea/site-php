@@ -1,5 +1,7 @@
 <h3 class="mb-5">Administração de Páginas</h3>
 
+<?php var_dump($data); ?>
+
 <table class="table table-hover">
     <thead>
         <tr>

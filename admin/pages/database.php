@@ -1,8 +1,9 @@
 <?php
 
-$pages_all = function() 
+$pages_all = function() use ($conn) 
 {
-    // [busca todas as páginas]
+    $result = $conn->query('SELECT * FROM pages');
+    return $result->fetch_all(MYSQLI_ASSOC);
 };
 
 $pages_one = function($id) 
@@ -20,12 +21,10 @@ $pages_edit = function($id)
 {
     // [atualiza a página]
     flash('Atualizado com sucesso', 'success');
-
 };
 
 $pages_delete = function($id) 
 {
     // [remove a página]
     flash('Removido com sucesso', 'success');
-
 };
