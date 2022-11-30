@@ -1,5 +1,10 @@
 <?php
 
+function pages_get_data()
+{
+    $title = filter_input(INPUT_POST, 'title');
+}
+
 $pages_all = function() use ($conn) 
 {
     $result = $conn->query('SELECT * FROM pages');
@@ -13,6 +18,8 @@ $pages_one = function($id)
 
 $pages_create = function() 
 {
+    $data = pages_get_data();
+
     // [cria a página]
     flash('Registrado com sucesso', 'success');
 };
