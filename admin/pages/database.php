@@ -3,6 +3,12 @@
 function pages_get_data()
 {
     $title = filter_input(INPUT_POST, 'title');
+    $url = filter_input(INPUT_POST, 'url');
+    $body = filter_input(INPUT_POST, 'body');
+
+    if (is_null($title) or is_null($url)) {
+        
+    }
 }
 
 $pages_all = function() use ($conn) 
