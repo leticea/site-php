@@ -1,13 +1,16 @@
 <?php
 
-function pages_get_data()
+function pages_get_data($redirectOnError)
 {
     $title = filter_input(INPUT_POST, 'title');
     $url = filter_input(INPUT_POST, 'url');
     $body = filter_input(INPUT_POST, 'body');
 
     if (is_null($title) or is_null($url)) {
-        
+
+        flash('Informe os campos de título e url', 'error');
+        header('location: ' . $redirectOnError);
+        die();
     }
 }
 
@@ -24,7 +27,7 @@ $pages_one = function($id)
 
 $pages_create = function() 
 {
-    $data = pages_get_data();
+    $data = pages_get_data('/admin/pages/create');
 
     // [cria a página]
     flash('Registrado com sucesso', 'success');
