@@ -12,6 +12,8 @@ function pages_get_data($redirectOnError)
         header('location: ' . $redirectOnError);
         die();
     }
+
+    return compact('title', 'body', 'url');
 }
 
 $pages_all = function() use ($conn) 
@@ -28,6 +30,8 @@ $pages_one = function($id)
 $pages_create = function() 
 {
     $data = pages_get_data('/admin/pages/create');
+
+    $sql = 'INSERT INTO pages (title, body, url, updated, created) VALUES (?, ?, ?, NOW(), NOW())';
 
     // [cria a página]
     flash('Registrado com sucesso', 'success');
