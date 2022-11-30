@@ -27,14 +27,18 @@ $pages_one = function($id)
     // [busca uma única página]
 };
 
-$pages_create = function() 
+$pages_create = function() use ($conn) 
 {
     $data = pages_get_data('/admin/pages/create');
 
     $sql = 'INSERT INTO pages (title, body, url, updated, created) VALUES (?, ?, ?, NOW(), NOW())';
 
-    // [cria a página]
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('sss', $data['title'], $data['body'], $data['url']);
+
     flash('Registrado com sucesso', 'success');
+
+    return $stmt->execute();
 };
 
 $pages_edit = function($id) 

@@ -10,6 +10,7 @@ include __DIR__ . '/database.php';
 } elseif (resolve('/admin/pages/create')) {
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        
         $pages_create();
         return header('location: /admin/pages');
     }
