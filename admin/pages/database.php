@@ -24,7 +24,9 @@ $pages_all = function() use ($conn)
 
 $pages_one = function($id) 
 {
-    // [busca uma única página]
+    $sql = 'SELECT * FROM pages WHERE id=?';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('i', $id);
 };
 
 $pages_create = function() use ($conn) 
