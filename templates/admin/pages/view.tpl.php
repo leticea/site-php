@@ -4,7 +4,7 @@
     <div class="col-3">
         <dl class="row">
             <dt class="col-sm-4">Título</dt>
-            <dd class="col-sm-8">Página inicial</dd>
+            <dd class="col-sm-8"><?php echo $data['page']['title']; ?></dd>
 
             <dt class="col-sm-4">URL</dt>
             <dd class="col-sm-8">/ - <a href="/" target="blank">abrir</a></dd>
