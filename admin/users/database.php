@@ -24,6 +24,15 @@ $users_all = function() use ($conn)
 $users_view = function() use ($conn)
 {
     $data = users_get_data('/admin/users/create');
+
+    $sql = 'insert into users (email, password, updated, created) VALUES (?, ?, NOW(), NOW())';
+
+    if (is_null($data['password'])) {
+
+        flash('Informe o campo email', 'error');
+        header('location: /admin/users/create');
+        die();
+    }
 };
 
 $users_create = function() use ($conn)
