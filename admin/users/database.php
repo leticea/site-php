@@ -23,6 +23,11 @@ $users_all = function() use ($conn)
 
 $users_view = function() use ($conn)
 {
+
+};
+
+$users_create = function() use ($conn)
+{
     $data = users_get_data('/admin/users/create');
 
     $sql = 'insert into users (email, password, updated, created) VALUES (?, ?, NOW(), NOW())';
@@ -33,11 +38,15 @@ $users_view = function() use ($conn)
         header('location: /admin/users/create');
         die();
     }
-};
 
-$users_create = function() use ($conn)
-{
+    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
 
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('ss', $data['email'], $data['password']);
+
+    flash('Salvo com sucesso', 'success');
+
+    return $stmt->execute();
 };
 
 $users_update = function() use ($conn)
