@@ -2,7 +2,7 @@
 
 $users_all = function() use ($conn)
 {
-    $result = $conn->query('SELECT * users');
+    $result = $conn->query('SELECT * FROM users');
     return $result->fetch_all(MYSQLI_ASSOC);
 };
 
