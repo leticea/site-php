@@ -20,5 +20,5 @@ if (resolve('/admin/users')) {
 
 } else if (resolve('/admin/users/(\d+)/delete')) {
 
-    render('admin/users/delete', 'admin');
+    return header('location: /admin/users');
 }
