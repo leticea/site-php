@@ -10,7 +10,7 @@
             placeholder="Título da página..."
             value="<?php echo $data['page']['title']; ?>"
             required
-        />
+        >
     </div>
     <div class="form-group">
         <label for="pagesUrl"><h5 class="mt-3">URL</h5></label>
@@ -24,12 +24,12 @@
                 class="form-control" 
                 placeholder="URL amigável, deixe em branco para informar a página inicial..." 
                 value="<?php echo $data['page']['url']; ?>"
-            />
+            >
         </div>
     </div>
     <br>
     <div class="form-group">
-        <input id="pagesBody" type="hidden" name="body" value="<?php echo $data['page']['body']; ?>" />
+        <input id="pagesBody" type="hidden" name="body" value="<?php echo $data['page']['body']; ?>">
         <trix-editor input="pagesBody"></trix-editor>
     </div>
 
