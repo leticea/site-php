@@ -20,8 +20,3 @@
 </table>
 
 <a href="/admin/users/create" class="btn btn-secondary">Novo</a>
-
-
-
-
-
