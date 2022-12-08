@@ -37,4 +37,4 @@
     <button type="submit" class="btn btn-primary">Salvar</button>
 </form>
 <hr>
-<a href="/admin/pages/1" class="btn btn-secondary">Voltar</a>
+<a href="/admin/pages/<?php echo $data['page']['id']; ?>" class="btn btn-secondary">Voltar</a>
