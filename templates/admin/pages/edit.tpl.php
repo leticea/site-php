@@ -8,7 +8,7 @@
             type="text" 
             class="form-control" 
             placeholder="Título da página..."
-            value="Página inicial"
+            value="<?php echo $data['page']['title']; ?>"
             required
         />
     </div>
