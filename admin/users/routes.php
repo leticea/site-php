@@ -4,7 +4,8 @@ include __DIR__ . '/database.php';
 
 if (resolve('/admin/users')) {
 
-    render('admin/users/index', 'admin');
+    $users = $users_all();
+    render('admin/users/index', 'admin', compact('users'));
 
 } else if (resolve('/admin/users/create')) {
 
