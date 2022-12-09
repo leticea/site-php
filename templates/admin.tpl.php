@@ -54,9 +54,23 @@
             const attachment = event.attachment;
 
             if (!attachment.file) {
-
                 return;
             }
+
+            const form = new FormData();
+            form.append('file', attachment.file);
+
+            $.ajax({
+                url: '/admin/upload/image',
+                method: 'POST',
+                data: form,
+                contentType: false,
+                processData: false
+            }).done(function() {
+                console.log('deu certo');
+            }).fail(function() {
+                console.log('deu ruim');
+            });
         });
 
         <?php flash(); ?>
