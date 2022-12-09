@@ -28,10 +28,10 @@
                         <span href="" class="nav-link text-white-50"><small>MENU</small></span>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link active">Páginas</a>
+                        <a href="/admin/pages" class="nav-link<?php if (resolve('/admin/pages.*')): ?> active<?php endif; ?>">Páginas</a>
                     </li>
                     <li class="nav-item">                        
-                        <a href="" class="nav-link">Usuários</a>
+                        <a href="/admin/users" class="nav-link">Usuários</a>
                     </li>                    
                 </ul>
             </div>
@@ -46,7 +46,6 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/resources/trix/trix.js"></script>
     <script src="/resources/pnotify/pnotify.custom.min.js"></script>
-
     <script>
 
         document.addEventListener('trix-attachment-add', function() {
@@ -75,8 +74,14 @@
 
                     return xhr;
                 }
-            }).done(function () {
-                console.log('deu certo');
+            }).done(function (response) {
+
+                console.log(response);
+                attachment.setAttributes({
+                    url: response,
+                    href: response
+                });
+                
             }).fail(function () {
                 console.log('deu ruim');
             });

@@ -19,7 +19,7 @@ if (resolve('/admin')) {
     if (!$file) {
 
         http_response_code(422);
-        echo json_encode(['status' => 'nenhum arquivo enviado']);
+        echo 'nenhum arquivo enviado';
         exit;
     }
 
@@ -33,11 +33,15 @@ if (resolve('/admin')) {
     if (!in_array($file['type'], $allowedTypes)) {
 
         http_response_code(422);
-        echo json_encode(['status' => 'arquivo não permitido']);
+        echo 'arquivo não permitido';
         exit;
     }
 
     $name = uniqid(rand(), true) . '.' . pathinfo($file['name'], PATHINFO_EXTENSION);
+
+    move_uploaded_file($file['tmp_name'], __DIR__ . '/../public/upload/' . $name);
+
+    echo '/upload/' . $name;
 
 } else {
 
