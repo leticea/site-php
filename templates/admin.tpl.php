@@ -48,6 +48,17 @@
     <script src="/resources/pnotify/pnotify.custom.min.js"></script>
 
     <script>
+
+        document.addEventListener('trix-attachment-add', function() {
+
+            const attachment = event.attachment;
+
+            if (!attachment.file) {
+
+                return;
+            }
+        });
+
         <?php flash(); ?>
         
         const confirmEl = document.querySelector('.confirm');
@@ -61,7 +72,6 @@
                 }
             });
         }
-
     </script>
 </body>
 </html>
