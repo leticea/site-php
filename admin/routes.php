@@ -1,7 +1,7 @@
 <?php
 
 if (resolve('/admin')) {
-    
+
     render('admin/home', 'admin');
 
 } elseif (resolve('/admin/pages.*')) {
@@ -10,7 +10,11 @@ if (resolve('/admin')) {
 
 } elseif (resolve('/admin/upload/image')) {
 
-    echo 'deu certo';
+    $file = $_FILES['file'] ?? null;
+    
+    if (!$file) {
+        echo json_encode(['status' => 'nenhum arquivo enviado']);
+    }
 
 } else {
 
