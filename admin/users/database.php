@@ -5,7 +5,7 @@ function users_get_data ($redirectOnError) {
     $email = filter_input(INPUT_POST, 'email');
     $password = filter_input(INPUT_POST, 'password');
 
-    if (is_null($email)) {
+    if (!$email) {
 
         flash('Informe o campo email', 'error');
         header('location: ' . $redirectOnError);

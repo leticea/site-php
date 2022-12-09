@@ -6,9 +6,9 @@ function pages_get_data($redirectOnError)
     $url = filter_input(INPUT_POST, 'url');
     $body = filter_input(INPUT_POST, 'body');
 
-    if (is_null($title) or is_null($url)) {
+    if (!$title) {
 
-        flash('Informe os campos de título e url', 'error');
+        flash('Informe o campo de título', 'error');
         header('location: ' . $redirectOnError);
         die();
     }
