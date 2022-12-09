@@ -17,13 +17,15 @@ if (resolve('/admin/users')) {
 
     render('admin/users/create', 'admin');
 
-} else if (resolve('/admin/users/(\d+)')) {
+} else if ($params = resolve('/admin/users/(\d+)')) {
 
-    render('admin/users/view', 'admin');
+    $user = $users_view($params[1]);
+    render('admin/users/view', 'admin', compact('user'));
 
-} else if (resolve('/admin/users/(\d+)/edit')) {
+} else if ($params = resolve('/admin/users/(\d+)/edit')) {
 
-    render('admin/users/edit', 'admin');
+    $user = $users_view($params[1]);
+    render('admin/users/edit', 'admin', compact('user'));
 
 } else if ($params = resolve('/admin/users/(\d+)/delete')) {
 
