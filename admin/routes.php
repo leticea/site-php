@@ -20,6 +20,7 @@ if (resolve('/admin')) {
 
         http_response_code(422);
         echo json_encode(['status' => 'nenhum arquivo enviado']);
+        exit;
     }
 
     $allowedTypes = [
@@ -31,7 +32,12 @@ if (resolve('/admin')) {
 
     if (!in_array($file['type'], $allowedTypes)) {
 
+        http_response_code(422);
+        echo json_encode(['status' => 'arquivo não permitido']);
+        exit;
     }
+
+    $name = uniqid(rand(), true) . '.' . pathinfo($file['name'], PATHINFO_EXTENSION);
 
 } else {
 
@@ -42,3 +48,4 @@ if (resolve('/admin')) {
 // [. = vai casar com qualquer caractere];
 // [* = 0 ou mais caracteres];
 // [é uma boa prática inserir os tipos das imagens para que não haja tentativa de fraude no sistema];
+// [uniqid = pega um valor único no php baseado num valor randômico];
