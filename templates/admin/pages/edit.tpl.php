@@ -29,10 +29,9 @@
     </div>
     <br>
     <div class="form-group">
-        <input id="pagesBody" type="hidden" name="body" value="<?php echo $data['page']['body']; ?>">
+        <input id="pagesBody" type="hidden" name="body" value="<?php echo htmlentities($data['page']['body']); ?>">
         <trix-editor input="pagesBody"></trix-editor>
     </div>
-
     <br>
     <button type="submit" class="btn btn-primary">Salvar</button>
 </form>

@@ -3,16 +3,12 @@
 <p>O que você quer fazer agora?</p>
 
 <p>
-    <a href="/admin/pages" class="btn btn-primary btn-lg">
+    <a href="" class="btn btn-primary btn-lg">
         <span style="font-size: 50px"><i class="fa-solid fa-file-lines"></i></span><br>
         Gerenciar páginas
     </a>    
-    <a href="/admin/users" class="btn btn-success btn-lg">
+    <a href="" class="btn btn-success btn-lg">
         <span style="font-size: 50px"><i class="fa-solid fa-user"></i></span><br>
         Gerenciar usuários
     </a>
 </p>
-
-
-
-<!--- <a href="/admin/pages">Pages</a>
