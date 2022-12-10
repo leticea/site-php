@@ -23,8 +23,8 @@
         </nav>
     </div>
     <div id="main">
-        <div class="row">
-            <div id="content" class="col">
+        <div class="row justify-content-center">
+            <div id="content" class="col-4 align-self-center">
                 <?php include $content ?>
             </div>
         </div>
