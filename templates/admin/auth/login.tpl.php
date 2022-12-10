@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card bg-dark text-white">
     <div class="card-body">
         <h5 class="card-title">Autenticação</h5>
 

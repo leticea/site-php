@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/resources/trix/trix.css">
     <link rel="stylesheet" href="/resources/pnotify/pnotify.custom.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    
+    <link rel="stylesheet" href="/css/style.css">    
     <title>Painel Administrativo</title>
 </head>
 <body class="d-flex flex-column">
