@@ -22,5 +22,11 @@ $login = function() use ($conn) {
         return false;
     }
 
-    
+    if (password_verify($password, $user['emails'])) {
+        unset($user['password']);
+        $_SESSION['auth'] = $user;
+        return true;
+    }
+
+    return false;
 };
