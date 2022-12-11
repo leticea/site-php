@@ -14,13 +14,13 @@
 
     <ul id="nav">
         <li><a href="/">Home</a></li>
-        <li><a href="/contato">Contato</a></li>
+        <li><a href="/contact">Contato</a></li>
     </ul>
 
     <main id="content">
-        <h1>Olá mundo</h1>
+        <?php include $content; ?>
     </main>
 
-    <p id="footer"><small>2022 - todos os direitos reservados</small></p>
+    <p id="footer"><small><?php echo date('Y') ?> - todos os direitos reservados</small></p>
 </body>
 </html>
