@@ -20,7 +20,7 @@
                     Painel Administrativo
                 </span>
             </span>
-            <a href="/admin/auth/logout" class="btn btn-danger"><i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="/admin/auth/login" class="btn btn-danger"><i class="fa-solid fa-right-from-bracket"></i></a>
         </nav>
     </div>
     <div id="main">
