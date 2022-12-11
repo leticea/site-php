@@ -13,8 +13,10 @@
     </header>
 
     <ul id="nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/contact">Contato</a></li>
+        <?php foreach ($data['pages'] as $item): ?>
+            <li><a href="/<?php echo $item['url'] ?>"><?php echo $item['title'] ?></a></li>
+        <?php endforeach; ?>
+        <li><a href="/contato">Contato</a></li>
     </ul>
 
     <main id="content">
