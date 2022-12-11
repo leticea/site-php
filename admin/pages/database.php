@@ -14,7 +14,7 @@ function pages_get_data($redirectOnError)
     }
 
     return compact('title', 'body', 'url');
-}
+};
 
 $pages_all = function() use ($conn) 
 {

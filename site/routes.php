@@ -1,12 +1,17 @@
 <?php
 
+require __DIR__ . '/../admin/pages/database.php';
+
 if (resolve('/')) {
+
     render('site/home', 'site');
 
 } elseif (resolve('/contact')) {
+
     render('site/contact', 'site');
 
-} else {
-    http_response_code(404);
-    echo 'Not found';
+} elseif (resolve('/(.*)')) {
+
+    $pages = $pages_all();
+    render('site/contact', 'site', compact('pages'));
 }
