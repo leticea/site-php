@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="/resources/pnotify/pnotify.custom.min.css">    
     <link rel="stylesheet" href="/site.css">
+    <title>Document</title>
 </head>
 <body>
     <header id="header">
@@ -24,5 +25,12 @@
     </main>
 
     <p id="footer"><small><?php echo date('Y') ?> - todos os direitos reservados</small></p>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/resources/pnotify/pnotify.custom.min.js"></script>
+
+    <script>
+        <?php flash(); ?>
+    </script>
 </body>
 </html>
