@@ -1,6 +1,7 @@
 <?php
 
-$login = function() use ($conn) {
+$login = function() use ($conn) 
+{
 
     $email = filter_input(INPUT_POST, 'email');
     $password = filter_input(INPUT_POST, 'password');
@@ -16,13 +17,13 @@ $login = function() use ($conn) {
     $stmt->execute();
 
     $result = $stmt->get_result();
-    $user = $result->fetch->assoc();
+    $user = $result->fetch_assoc();
 
     if (!$user) {
         return false;
     }
 
-    if (password_verify($password, $user['emails'])) {
+    if (password_verify($password, $user['password'])) {
         unset($user['password']);
         $_SESSION['auth'] = $user;
         return true;
