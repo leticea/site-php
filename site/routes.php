@@ -2,18 +2,19 @@
 
 require __DIR__ . '/../admin/pages/database.php';
 
-if (resolve('/')) {
-
-    $pages = $pages_all();
-    render('site/home', 'site', compact('pages'));
-
-} elseif (resolve('/contact')) {
+if (resolve('/contact')) {
 
     $pages = $pages_all();
     render('site/contact', 'site', compact('pages'));
 
-} elseif (resolve('/(.*)')) {
+} elseif ($params = resolve('/(.*)')) {
 
     $pages = $pages_all();
-    render('site/contact', 'site', compact('pages'));
+
+    foreach ($pages as $page) {
+        if ($page['url'] == $params[1]) {
+            break;
+        }
+    }
+    render('site/page', 'site', compact('pages', 'page'));
 }
