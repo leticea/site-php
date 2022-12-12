@@ -8,10 +8,10 @@
 <br>
 
 <p align="center">
-  <img alt="store" src=".github/image.png">
+  <img alt="site" src=".github/image.png">
 </p>
 
-## PHP STORE
+## SITE ADMINISTRÁVEL COM PHP
 
 ## 🚀 Tecnologias
 
@@ -31,6 +31,8 @@ Aula do curso da [School of Net](https://www.schoolofnet.com/)
 ## 🚀 Como Rodar
 
 - Clone o projeto.
+- Entre no repositório e clique duas vezes no arquivo index.php.
+
 
 ## 🤔 Como contribuir
 
