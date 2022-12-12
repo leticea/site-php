@@ -12,23 +12,18 @@
     <header id="header">
         <h1>Bem-vindo(a)</h1>
     </header>
-
     <ul id="nav">
         <?php foreach ($data['pages'] as $item): ?>
             <li><a href="/<?php echo $item['url'] ?>"><?php echo $item['title'] ?></a></li>
         <?php endforeach; ?>
         <li><a href="/contact">Contato</a></li>
     </ul>
-
     <main id="content">
         <?php include $content; ?>
     </main>
-
     <p id="footer"><small><?php echo date('Y') ?> - todos os direitos reservados</small></p>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="/resources/pnotify/pnotify.custom.min.js"></script>
-
     <script>
         <?php flash(); ?>
     </script>

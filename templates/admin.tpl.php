@@ -49,7 +49,6 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/resources/trix/trix.js"></script>
     <script src="/resources/pnotify/pnotify.custom.min.js"></script>
-
     <script>
         document.addEventListener('trix-attachment-add', function() {
 
