@@ -17,9 +17,9 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [PHP](https://www.php.net/) 
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) 
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [PHP](https://www.php.net/) - 8.2.4
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML) 
+- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
 ## 💻 Projeto
