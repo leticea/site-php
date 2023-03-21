@@ -11,7 +11,7 @@
   <img alt="site" src=".github/image.png">
 </p>
 
-## SITE ADMINISTRÁVEL COM PHP
+## Site Administrável com PHP
 
 ## 🚀 Tecnologias
 
